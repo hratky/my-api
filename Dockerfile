@@ -1,12 +1,10 @@
-    # Základní image
+# Základní image
 FROM python:3.11-slim
 
 # Pracovní adresář
 WORKDIR /app
 
-# Kopírování requirements a instalace
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install fastapi uvicorn
 
 # Kopírování zbytku kódu
 COPY . .
@@ -15,4 +13,4 @@ COPY . .
 EXPOSE 8000
 
 # Spuštění
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"] 
