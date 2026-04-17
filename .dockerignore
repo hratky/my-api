@@ -1,0 +1,6 @@
+# Ignoruj tyto veledůležité věci
+.env
+.git/
+venv/
+__pycache__/
+*.log
