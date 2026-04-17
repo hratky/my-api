@@ -7,5 +7,5 @@ def home():
     return {"msg": "Ahoj z FastAPI!"}
 
 @app.get('/nic')
-def home():
+def home2():
     return {"msg": "Nic!"}
